@@ -56,10 +56,24 @@ var resume = {
 
 
 //ITERATE USING FOR LOOP
-
+var arr = Object.keys(resume);
+console.log(`USING FOR LOOP:`);
+for(i=0;i<arr.length;i++){
+    console.log(`${arr[i]} : ${resume[arr[i]]}`);
+}
 
 //ITERATE USING FOR IN LOOP
+console.log(`USING FOR-IN LOOP:`);
 for(key in resume){
-    console.log(resume[key]);
     console.log(`${key} : ${resume[key]}`);
 }
+
+//ITERATE USING FOR-OF LOOP
+console.log(`USING FOR-OF LOOP`);
+for(var key of arr){
+    console.log(`${key} : ${resume[key]}`);
+}
+
+//ITERATE USING FOR-EACH LOOP
+console.log(`USING FOR-EACH LOOP`);
+arr.forEach((ele)=>console.log(resume[ele]));
